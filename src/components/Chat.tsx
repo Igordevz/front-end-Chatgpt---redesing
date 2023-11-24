@@ -38,7 +38,7 @@ export default function Application() {
               <p>Allows user to provide follow-up corrections.</p>
               <p>Trained to decline inappropriate requests.</p>
             </div>
-          </div>{" "}
+          </div>
           <div className="group">
             <Image src={limitations} alt="chat" />
             <h1>Limitations</h1>
