@@ -25,9 +25,12 @@ export default function Application() {
             <Image src={chatsImg} alt="chat" />
             <h1>Examples</h1>
             <div className="models">
-              <p>"Explain quantum computing insimple terms"</p>
-              <p>"Got any creative ideas for a 10year old's birthday?"</p>
-              <p>"How do I make an HTTP requestin Javascript?"</p>
+              <p>&ldquo;Explain quantum computing in simple terms&rdquo;</p>
+              <p>
+                &ldquo;Got any creative ideas for a 10-year-old's
+                birthday?&rdquo;
+              </p>
+              <p>&ldquo;How do I make an HTTP request in Javascript?&rdquo;</p>
             </div>
           </div>
           <div className="group">
