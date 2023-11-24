@@ -27,7 +27,7 @@ export default function Application() {
             <div className="models">
               <p>Explain quantum computing in simple terms</p>
               <p>
-                Got any creative ideas for a 10-year-olds
+                Got any creative ideas for a 10 year olds
                 birthday?
               </p>
               <p>How do I make an HTTP request in Javascript?</p>
