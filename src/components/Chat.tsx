@@ -60,6 +60,7 @@ export default function Application() {
             <input type="text" placeholder="Type message" />
             <div className="left">
               <Image alt="img" src={rec} />
+              <input type="file" className="File-input"/>
               <Image alt="img" src={img} />
             </div>
             <div className="submit-img">

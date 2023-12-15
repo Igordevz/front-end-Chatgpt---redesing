@@ -227,6 +227,18 @@ export const ContainerPage = styled.div`
     padding-left: 70px;
     color: white;
   }
+  main form .content-input .File-input {
+    background-color: none;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 40px;
+    opacity: 0;
+    margin-left: 20px;
+    position: absolute;
+    padding-left: 0px;
+    color: white;
+  }
   main form .left {
     position: absolute;
     display: flex;
@@ -246,21 +258,22 @@ export const ContainerPage = styled.div`
     outline: none;
   }
 
-  @media (max-width: 1152px){
+  @media (max-width: 1152px) {
     aside {
       display: none;
     }
-    main{
+    main {
       width: 100%;
     }
-  };
-  @media (max-width: 957px){
-    main .content-groups .group:nth-child(2), main .content-groups .group:nth-child(3) {
+  }
+  @media (max-width: 957px) {
+    main .content-groups .group:nth-child(2),
+    main .content-groups .group:nth-child(3) {
       display: none;
     }
   }
-  @media (max-width: 667px){
-    main form .content-input{
+  @media (max-width: 667px) {
+    main form .content-input {
       width: 80%;
     }
   }
