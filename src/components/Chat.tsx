@@ -14,7 +14,7 @@ import limitations from "@/assets/IconSet.png";
 export default function Application() {
   return (
     <ContainerPage>
-      <Aside />
+      <Aside/>
       <main>
         <div className="content-top">
           <Image alt="chatgpt" src={chatgptLogo} />
@@ -57,7 +57,7 @@ export default function Application() {
 
         <form>
           <div className="content-input">
-            <input type="text" placeholder="Type message" />
+            <textarea  placeholder="Type message" />
             <div className="left">
               <Image alt="img" src={rec} />
               <input type="file" className="File-input"/>

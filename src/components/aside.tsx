@@ -7,12 +7,14 @@ import account from "@/assets/account.png";
 import singout from "@/assets/SignOut.png";
 import trash from "@/assets/trash.png";
 import updates from "@/assets/updates.png";
+import close from "@/assets/marca-cruzada.png"
 import { useState } from "react";
+import MenuItem from './menu';
 
 export default function Aside() {
 
         const [recentChat, setRecentChat] = useState<any | undefined>([]);
-
+        const [menu, setMenu ] = useState(false)
         function CreateChat() {
           const newChat = {
             name: "New chat",
@@ -21,7 +23,6 @@ export default function Aside() {
 
           setRecentChat((preChat: any) => [...preChat, newChat]);
 
-          console.log(recentChat);
         }
 
         function ClearChat() {
@@ -40,8 +41,16 @@ export default function Aside() {
         }
 
   return (
-    <aside>
+    <>
+    {menu? (
+      <MenuItem state={{setMenu}}/>
+    ) : (
+      <aside>
       <div className="items-top">
+        <button id='close-chat' onClick={() => setMenu(!menu)}>
+          <Image src={close} alt='close'/>
+          <h3>Fechar</h3>
+        </button>
         <button id="create-chat" onClick={CreateChat}>
           + New chat
         </button>
@@ -57,7 +66,7 @@ export default function Aside() {
                     alt="trash"
                     onClick={() => removeChat(index)}
                     src={trash}
-                  />
+                    />
                 </button>
               </>
             );
@@ -91,5 +100,9 @@ export default function Aside() {
         </div>
       </div>
     </aside>
+    )}
+
+  
+                    </>
   );
 }

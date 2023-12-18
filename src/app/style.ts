@@ -37,6 +37,7 @@ export const ContainerPage = styled.div`
     height: auto;
     max-height: 60vh;
     overflow: hidden;
+    display: flex;
   }
   aside .items-top button {
     background: none;
@@ -75,6 +76,9 @@ export const ContainerPage = styled.div`
     align-items: center;
     margin-top: 50px;
     overflow-y: scroll;
+  }
+  aside .items-top #close-chat{
+    display: none;
   }
   aside .items-top .recent-chat button {
     margin-top: 15px;
@@ -161,7 +165,7 @@ export const ContainerPage = styled.div`
   }
 
   main {
-    position: fixed;
+    position: absolute;
     right: 0;
     height: 100vh;
     width: 79%;
@@ -214,17 +218,18 @@ export const ContainerPage = styled.div`
   main form .content-input {
     width: 60%;
     height: 50px;
-
     position: relative;
   }
-  main form .content-input input {
+  main form .content-input textarea {
     background-color: #272727;
     border: none;
     border-radius: 5px;
     outline: none;
     width: 100%;
     height: 100%;
+    padding-top: 18px;
     padding-left: 70px;
+    padding-right: 30px;
     color: white;
   }
   main form .content-input .File-input {
@@ -259,8 +264,42 @@ export const ContainerPage = styled.div`
   }
 
   @media (max-width: 1152px) {
+    aside .items-top{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    aside .items-top #close-chat {
+      display: flex;
+      gap: 20px;
+    }
+    aside .items-top #close-chat h3{
+      font-size: 20px;
+    }
+    aside .items-top #create-chat {
+      position: relative;
+    }
     aside {
-      display: none;
+       width: 50%;
+       background: #000;
+       z-index: 1;
+
+       animation: loading .5s;
+    }
+    @keyframes loading {
+      0%{
+        transform: translateX(-30px);
+        transform: skew(5deg);
+      }
+      50%{
+       transform: skew(0deg);
+
+      }
+      100%{
+        transform: translateX(0);
+      }
     }
     main {
       width: 100%;
